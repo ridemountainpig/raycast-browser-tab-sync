@@ -1,0 +1,80 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "browser-tab-sync",
+  "title": "Browser Tab Sync",
+  "description": "Sync Browser Tab Between Different Browser",
+  "icon": "extension-icon.png",
+  "author": "ridemountainpig",
+  "owner": "yc-org",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "categories": [
+    "Applications",
+    "Data"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "browser-tab-sync",
+      "title": "Browser Tab Sync",
+      "description": "Sync Browser Tab",
+      "mode": "no-view",
+      "interval": "1m"
+    },
+    {
+      "name": "browser-tab-menubar",
+      "title": "Browser Tabs",
+      "subtitle": "Synced Tabs",
+      "description": "View and open synced browser tabs",
+      "mode": "menu-bar"
+    },
+    {
+      "name": "settings",
+      "title": "Browser Tab Sync Settings",
+      "description": "Configure device-specific settings",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "postgresConnectionString",
+      "type": "password",
+      "required": true,
+      "title": "PostgreSQL Connection String",
+      "description": "Connection string for the PostgreSQL database (e.g., postgres://user:password@host:port/database)",
+      "placeholder": "postgres://user:password@localhost:5432/mydb"
+    },
+    {
+      "name": "ignoredUrls",
+      "type": "textfield",
+      "required": false,
+      "title": "Ignored URLs",
+      "description": "Comma-separated list of URLs or keywords to ignore",
+      "placeholder": "localhost, 127.0.0.1, example.com"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.1",
+    "@raycast/utils": "^2.2.2",
+    "@types/pg": "^8.16.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "25.0.3",
+    "@types/react": "19.2.7",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
