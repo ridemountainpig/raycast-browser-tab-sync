@@ -1,5 +1,7 @@
 # Browser Tab Sync
 
+![Browser Tab Sync Banner](./assets/banner.png)
+
 A Raycast extension that synchronizes browser tabs across different browsers and devices using PostgreSQL as the backend storage.
 
 ## Features
