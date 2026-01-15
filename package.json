@@ -25,10 +25,15 @@
     },
     {
       "name": "browser-tab-menubar",
-      "title": "Browser Tabs",
-      "subtitle": "Synced Tabs",
+      "title": "Browser Tabs Menubar",
       "description": "View and open synced browser tabs",
       "mode": "menu-bar"
+    },
+    {
+      "name": "browser-tab-list",
+      "title": "Browser Tabs List",
+      "description": "View and search synced browser tabs",
+      "mode": "view"
     },
     {
       "name": "settings",
